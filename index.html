@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sokcho Stream 포트폴리오</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #eef2f3, #ffffff); /* 그라디언트 배경 */
+      color: #333;
+    }
+    nav {
+      background-color: #24292e;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    header {
+      background-color: #24292e;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 10px;
+    }
+    section {
+      margin: 40px auto;
+      padding: 0 20px;
+      max-width: 900px;
+    }
+    h2.section-title {
+      color: #0366d6;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+    .project {
+      background: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 8px;
+    }
+    .project h3 {
+      margin-top: 0;
+      color: #24292e;
+    }
+    .meta {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    a {
+      color: #0366d6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 네비게이션 바 -->
+  <nav>
+    <a href="/">Home</a>
+    <a href="https://github.com/sokcho-kim" target="_blank">GitHub</a>
+    <a href="#projects">Projects</a>
+  </nav>
+
+  <!-- 헤더 -->
+  <header>
+    <h1>Sokcho Stream</h1>
+    <p>데이터/AI 개발자 · sokchokim@kakao.com</p>
+  </header>
+
+  <!-- 본문 -->
+  <section id="projects">
+    <h2 class="section-title">프로젝트 목록</h2>
+
+    <!-- 여기에 프로젝트 카드들 들어감 (기존 내용 복붙해서 넣으면 됨) -->
+    <!-- 예시 -->
+    <div class="project">
+      <h3>DeePrint: 딥러닝 기반 아동 미술 심리 진단</h3>
+      <p class="meta">2025.02.20 ~ 2025.05.05 | 역할: 해석 API 구축</p>
+      <p>YOLO와 Gemini API를 결합해 HTP 그림을 해석하는 시스템</p>
+      <ul>
+        <li>YOLO 학습 → 객체 탐지 → RAG 기반 문장 생성</li>
+        <li>FastAPI + Streamlit 웹서비스로 배포</li>
+      </ul>
+      <p><a href="https://github.com/potenup-3rd-team4/Deep_Learning" target="_blank">GitHub 보기</a></p>
+    </div>
+
+    <!-- 다른 프로젝트도 계속 추가하면 됨 -->
+
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김지민 포트폴리오</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f7f8fa;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background-color: #24292e;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 10px;
+    }
+    section {
+      margin: 40px 0;
+    }
+    h2 {
+      color: #0366d6;
+    }
+    .project {
+      background: white;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 8px;
+    }
+    .project h3 {
+      margin-top: 0;
+      color: #24292e;
+    }
+    .meta {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      margin-top: 60px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>김지민 포트폴리오</h1>
+    <p>데이터/AI 개발자 · sokchokim@kakao.com</p>
+  </header>
+
+  <section>
+    <h2 class="section-title">프로젝트 목록</h2>
+
+    <!-- Part1 -->
+    <div class="project">
+      <h3>T래블: 수도권 대중교통 기반 AI 여행 서비스</h3>
+      <p class="meta">기간: 2024.12.16 ~ 2024.12.30 | 역할: 리뷰 크롤링 및 시각화, 분석</p>
+      <p>코로나 이후 증가한 여행 수요와 AI 기반 여행 서비스의 변화에 대응하여 수도권 대중교통과 연계한 최적의 여행 경로를 제안하는 서비스입니다.</p>
+      <ul>
+        <li>유튜브 댓글 1,488건, 앱스토어 리뷰 총 8,814건 수집 및 전처리</li>
+        <li>형태소 분석기(kiwi, okt) 비교 적용, 동사 기반 워드클라우드 제작</li>
+        <li>기후동행카드 시범/정식 시행 간 여론 비교 분석</li>
+      </ul>
+      <p><a href="https://www.canva.com/design/DAGZtux51-g/47gBWnz96Q-3bcrnKblYyg/edit" target="_blank">보고서 보기</a></p>
+    </div>
+
+    <!-- Part2 -->
+    <div class="project">
+      <h3>BE MY MUSE: GPT 기반 자동 작사 서비스</h3>
+      <p class="meta">기간: 2025.01.03 ~ 2025.02.03 | 역할: FastAPI 기반 서비스 개발</p>
+      <p>키워드와 감성을 입력받아 맞춤형 가사를 생성하는 GPT 기반 작사 서비스입니다.</p>
+      <ul>
+        <li>멜론 차트 기반 7,349곡 크롤링 (Selenium, BeautifulSoup)</li>
+        <li>텍스트 정규화, 형태소 분석 및 N-gram 처리</li>
+        <li>KoGPT-2, BERT, SVM 기반 감성 분석 적용</li>
+        <li>FastAPI + Streamlit 기반 웹서비스 구현</li>
+      </ul>
+      <p><a href="https://www.canva.com/design/DAGd1CW20wA/MfQJQDQdldA8Qs6XvhyuLg/edit" target="_blank">보고서 보기</a> | <a href="https://github.com/sokcho-kim/Two_Kim_and_One_Lee.git" target="_blank">GitHub</a></p>
+    </div>
+
+    <!-- Part3 -->
+    <div class="project">
+      <h3>DeePrint: 딥러닝 기반 아동 미술 심리 진단</h3>
+      <p class="meta">기간: 2025.02.20 ~ 2025.05.05 | 역할: 해석 API 구축</p>
+      <p>HTP 그림을 YOLO로 분석하고, Gemini API와 RAG를 통해 심리 분석 문장을 생성하는 AI 심리 진단 시스템입니다.</p>
+      <ul>
+        <li>YOLO 학습을 위한 JSON → YOLO 변환</li>
+        <li>mAP, IoU 기반 객체 탐지 성능 평가</li>
+        <li>탐지 객체 해석 문장화 (RAG + Gemini API)</li>
+        <li>FastAPI + Streamlit으로 심리 해석 웹서비스 구현</li>
+      </ul>
+      <p><a href="https://github.com/potenup-3rd-team4/Deep_Learning" target="_blank">GitHub</a></p>
+    </div>
+
+    <!-- Part4 -->
+    <div class="project">
+      <h3>BaristAI: 얼굴인식 기반 AI 커피 키오스크</h3>
+      <p class="meta">기간: 2025.03.06 ~ 2025.04.03 | 역할: STT/TTS/백엔드 구현</p>
+      <p>Whisper, Google TTS, LangChain, GPT-4o-mini 등을 활용한 고령층 친화형 AI 커피 키오스크 서비스입니다.</p>
+      <ul>
+        <li>Whisper + VAD로 소음 환경에서도 안정적인 STT 구현</li>
+        <li>LangChain Prompt 구조화 및 컨텍스트 유지</li>
+        <li>FastAPI + SQLite + ChromaDB 통합 서버 구성</li>
+        <li>Streamlit UI로 시나리오 기반 프로토타입 완성</li>
+      </ul>
+      <p><a href="https://github.com/Wanted-AI-project/Korean_AI_Kiosk_Agent" target="_blank">GitHub 백엔드</a></p>
+    </div>
+
+    <!-- Part5 -->
+    <div class="project">
+      <h3>올라락! 깨구락! - AI 점프 액션 게임</h3>
+      <p class="meta">기간: 2025년 4월 | 역할: 텍스처 생성기 개발</p>
+      <p>AI 기반 텍스처 자동 생성 파이프라인을 구현해 게임 내 감성 스토리와 사용자 상호작용을 강화한 액션 게임 프로젝트입니다.</p>
+      <ul>
+        <li>Flux-LoRA 기반 사분면 텍스처 생성 모델 적용</li>
+        <li>FastAPI 기반 추론 서버 + Streamlit UI 구현</li>
+        <li>프롬프트 기반 멀티 텍스처 자동 생성 구조 설계</li>
+        <li>이미지 저장 최적화 및 텍스처 출력 포맷 규격화</li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>
