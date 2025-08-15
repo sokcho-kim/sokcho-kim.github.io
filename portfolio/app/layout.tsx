@@ -28,17 +28,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <head>
-        <style>{`
-html {
-  font-family: ${inter.style.fontFamily};
-  --font-sans: ${inter.variable};
-  --font-mono: ${jetbrainsMono.variable};
-}
-        `}</style>
-      </head>
-      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans`}>{children}</body>
+    <html lang="en" className={`dark ${inter.variable} ${jetbrainsMono.variable}`}>
+      <body className="font-sans">{children}</body>
     </html>
   )
 }
