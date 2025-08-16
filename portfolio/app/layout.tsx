@@ -16,9 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "김속초 (Kim Sokcho) - AI Engineer & Backend Developer",
+  title: "김지민(Jimin Kim) - AI Engineer & Backend Developer",
   description:
-    "Portfolio of Kim Sokcho - AI Engineer, Backend Developer, and Data Scientist specializing in intelligent solutions",
+    "Portfolio of Jimin Kim - AI Engineer, Backend Developer, and Data Scientist specializing in intelligent solutions",
   generator: "v0.app",
 }
 
