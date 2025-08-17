@@ -1,4 +1,4 @@
-name: Deploy Next.js Portfolio to GitHub Pages
+name: Deploy Jekyll Blog to GitHub Pages
 
 on:
   push:
@@ -10,6 +10,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,53 +21,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          node-version: '18'
-          # cache 부분 제거
-          
-      - name: Check portfolio structure
-        run: |
-          echo "Repository structure:"
-          ls -la
-          echo "Portfolio folder contents:"
-          ls -la portfolio/
-          echo "Package files:"
-          ls -la portfolio/package*.json || echo "No package files found"
-          
-      - name: Install dependencies
-        run: |
-          cd portfolio
-          npm install  # npm ci 대신 npm install 사용
-          
-      - name: Configure Next.js for GitHub Pages
-        run: |
-          cd portfolio
-          cat > next.config.js << 'CONFIG_EOF'
-          /** @type {import('next').NextConfig} */
-          const nextConfig = {
-            output: 'export',
-            trailingSlash: true,
-            images: {
-              unoptimized: true
-            }
-          }
-          module.exports = nextConfig
-          CONFIG_EOF
-          
-      - name: Build Next.js app
-        run: |
-          cd portfolio
-          npm run build
+          ruby-version: '3.1'
+          bundler-cache: true
+          working-directory: ./sokcho-stream
           
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v4
         
+      - name: Build with Jekyll
+        run: |
+          cd sokcho-stream
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './portfolio/out'
+          path: ./sokcho-stream/_site
 
   deploy:
     environment:
